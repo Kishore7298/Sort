@@ -1,22 +1,7 @@
-class Sorter {
-  constructor(public collection: number[]) {}
+import { Number } from './Number';
+import { Sorter } from './Sorter';
 
-  sort(): void {
-    // implementing the bubble sort here.
-    let { length } = this.collection;
-
-    for (let i = 0; i < length; i++) {
-      for (let j = 0; j < length - i - 1; j++) {
-        if (this.collection[j] > this.collection[j + 1]) {
-          let temp = this.collection[j];
-          this.collection[j] = this.collection[j + 1];
-          this.collection[j + 1] = temp;
-        }
-      }
-    }
-  }
-}
-
-let sorter = new Sorter([10, 2, -1, 0]);
+let number = new Number([5, 4, 3, 2, 1]);
+let sorter = new Sorter(number);
 sorter.sort();
-console.log(sorter.collection);
+console.log(number.collection);
