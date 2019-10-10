@@ -1,7 +1,11 @@
-import { Number } from './Number';
+interface Sortable {
+  length: number;
+  swap(leftIndex: number, rightIndex: number): void;
+  compare(leftIndex: number, rightIndex: number): boolean;
+}
 
 export class Sorter {
-  constructor(public collection: Number) {}
+  constructor(public collection: Sortable) {}
 
   sort(): void {
     // implementing the bubble sort here.

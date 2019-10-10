@@ -1,16 +1,16 @@
 export class Number {
-  constructor(public collection: number[]) {}
+  constructor(public data: number[]) {}
 
   get length(): number {
-    return this.collection.length;
+    return this.data.length;
   }
   compare(leftIndex: number, rightIndex: number): boolean {
-    return this.collection[leftIndex] > this.collection[rightIndex];
+    return this.data[leftIndex] > this.data[rightIndex];
   }
 
   swap(leftIndex: number, rightIndex: number): void {
-    let leftHand = this.collection[leftIndex];
-    this.collection[leftIndex] = this.collection[rightIndex];
-    this.collection[rightIndex] = leftHand;
+    let leftHand = this.data[leftIndex];
+    this.data[leftIndex] = this.data[rightIndex];
+    this.data[rightIndex] = leftHand;
   }
 }
